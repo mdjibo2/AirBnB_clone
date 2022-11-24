@@ -63,8 +63,8 @@ OR
 
 Command | What it does | Usage
 --- | --- | ---
-**create** | Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id | create <class name>
-**show** | Prints the string representation of an instance based on the class name and id | show <class name> <id>
-**destroy** | Deletes an instance based on the class name and id (save the change into the JSON file) | destroy <class name> <id>
-**all** | Prints all string representation of all instances based or not on the class name | all <class name> or all
-**update** | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file) | update <class name> <id> <attribute name> "<attribute value>"
+**create** | Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id | create \<class name\>
+**show** | Prints the string representation of an instance based on the class name and id | show \<class name\> \<id\>
+**destroy** | Deletes an instance based on the class name and id (save the change into the JSON file) | destroy \<class name\> \<id\>
+**all** | Prints all string representation of all instances based or not on the class name | all \<class name\> or all
+**update** | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file) | update \<class name\> \<id\> \<attribute name\> "\<attribute value\>"
