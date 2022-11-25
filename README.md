@@ -68,3 +68,30 @@ Command | What it does | Usage
 **destroy** | Deletes an instance based on the class name and id (save the change into the JSON file) | destroy \<class name\> \<id\>
 **all** | Prints all string representation of all instances based or not on the class name | all \<class name\> or all
 **update** | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file) | update \<class name\> \<id\> \<attribute name\> "\<attribute value\>"
+
+### Examples
+
+Command | Usage Example
+--- | ---
+**create** | create BaseModel
+**show** | show BaseModel 1234-1234-1234
+**destroy** | destroy BaseModel 1234-1234-1234
+**all** | all BaseModel
+**update** | update BaseModel 1234-1234-1234 email "aibnb@mail.com"
+
+### Classes
+
+Classes | Attributes
+--- | ---
+**BaseModel** | `id`, `created_at`, `updated_at`
+**User** | `email`, `password`, `first_name`, `last_name`
+**State** | `name`
+**City** | `state_id`, `name`
+**Amenity** | `name`
+**Place** | `city_id`, `user_id`, `name`, `description`, `number_rooms`, `number_bathrooms`, `max_guest`, `price_by_night`, `latitude`, `longitude`, `amenity_ids`
+**Review** | `place_id`, `user_id`, `text`
+
+## Contributors
+
+[Abdulrahman Oyetade](https://github.com/Ola-mide)
+[Mahamadou ADAMOU DJIBO](https://github.com/mdjibo2)
