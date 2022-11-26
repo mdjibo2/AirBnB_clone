@@ -152,7 +152,10 @@ class HBNBCommand(cmd.Cmd):
         else:
             all_instances = []
             for obj in storage.all().values():
-                all_instances.append(str(obj))
+                if class_name == obj.__class__.__name__:
+                    all_instances.append(str(obj))
+                elif len(class_name) == 0:
+                    all_instances.append(str(obj))
             print(all_instances)
 
     def do_update(self, arg):
