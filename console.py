@@ -96,17 +96,16 @@ class HBNBCommand(cmd.Cmd):
             class_name = arg
             class_id = ""
 
+        key = "{0}.{1}".format(class_name, class_id)
         if len(class_name) == 0:
             print("** class name missing **")
         elif len(class_name) != 0 and class_name not in HBNBCommand.models:
             print("** class doesn't exist **")
         elif class_name in HBNBCommand.models and len(class_id) == 0:
             print("** instance id missing **")
-        elif class_name in HBNBCommand.models and len(class_id) != 0 and \
-                class_id not in HBNBCommand.class_ids:
+        elif key not in storage.all():
             print("** no instance found **")
         else:
-            key = "{0}.{1}".format(class_name, class_id)
             print(storage.all()[key])
 
     def do_destroy(self, arg):
@@ -121,18 +120,16 @@ class HBNBCommand(cmd.Cmd):
         else:
             class_name = arg
             class_id = ""
-
+        key = "{0}.{1}".format(class_name, class_id)
         if len(class_name) == 0:
             print("** class name missing **")
         elif len(class_name) != 0 and class_name not in HBNBCommand.models:
             print("** class doesn't exist **")
         elif class_name in HBNBCommand.models and len(class_id) == 0:
             print("** instance id missing **")
-        elif class_name in HBNBCommand.models and len(class_id) != 0 and \
-                class_id not in HBNBCommand.class_ids:
+        elif key not in storage.all():
             print("** no instance found **")
         else:
-            key = "{0}.{1}".format(class_name, class_id)
             storage.all().pop(key)
             storage.save()
             HBNBCommand.class_ids.remove(class_id)
